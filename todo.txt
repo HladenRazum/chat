@@ -1,0 +1,4 @@
+- use shadcn for the frontend ui
+- may be use docker to combine the two repos
+- write tests if applicable
+- test github actions

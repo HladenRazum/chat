@@ -1,0 +1,11 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "A chat app built with socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krasimir Kostadinov",
+  "license": "MIT"
+}

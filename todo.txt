@@ -2,3 +2,7 @@
 - may be use docker to combine the two repos
 - write tests if applicable
 - test github actions
+
+
+client:
+- design: https://www.figma.com/community/file/1173238587330139798/chat-app-ui

@@ -1,26 +1,22 @@
 import { Separator } from '@/components/ui/Separator';
+import Chat from '@/components/chat/Chat';
+import ContactsList from '@/components/chat/ContactsList';
+import ContactDetails from './components/chat/ContactDetails';
 
 function App() {
   return (
     <div className='container'>
-      <div className='flex h-screen space-x-4 text-sm'>
-        <div className='w-[400px] p-5'>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-            veritatis deleniti iusto et laboriosam. Dignissimos natus est eum
-            doloribus suscipit!
-          </p>
+      <div className='flex h-screen'>
+        <div className='w-[300px] p-5'>
+          <ContactsList />
         </div>
         <Separator orientation='vertical' />
-        <div className='w-full p-5'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam qui
-            fugit quidem facilis animi earum sint culpa quasi assumenda
-            dignissimos perspiciatis adipisci reiciendis, eligendi quam quod
-            doloribus, omnis minus esse soluta officia ab sequi? Nulla,
-            incidunt. Facilis modi asperiores animi hic. Id harum recusandae
-            fugit consequatur ducimus facere dignissimos commodi?
-          </p>
+        <div className='w-full'>
+          <Chat />
+        </div>
+        <Separator orientation='vertical' />
+        <div className='p-5 w-[300px]'>
+          <ContactDetails />
         </div>
       </div>
     </div>

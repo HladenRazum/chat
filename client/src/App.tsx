@@ -2,7 +2,7 @@ import ChatApp from '@/components/chat';
 
 function App() {
   return (
-    <div className="container">
+    <div className='container'>
       <ChatApp />
     </div>
   );

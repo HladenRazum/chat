@@ -1,28 +1,14 @@
-import express from 'express';
-import { createServer } from 'node:http';
-import { Server } from 'socket.io';
-
-const app = express();
-const server = createServer(app);
-const io = new Server(server, {
+const io = require('socket.io')(3000, {
   cors: {
     origin: 'http://localhost:5173',
   },
-});
+})
 
 io.on('connection', (socket) => {
-  console.log('User connected');
+  const currentTime = new Date().toISOString()
+  console.log(`user ${socket.id} connected - ${currentTime}`)
 
-  socket.on('chat_message', (msg) => {
-    console.log(msg);
-    io.emit('chat_message', msg);
-  });
-
-  socket.on('disconnect', (_socket) => {
-    console.log('User disconnected');
-  });
-});
-
-server.listen(3000, () => {
-  console.log('server running at http://localhost:3000');
-});
+  socket.on('disconnect', () => {
+    console.log(`user ${socket.id} disconnected`)
+  })
+})
